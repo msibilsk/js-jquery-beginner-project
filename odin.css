@@ -1,4 +1,4 @@
-div {
+.black {
 float: right;
 background-color: black;
 height: 15px; 
@@ -11,4 +11,7 @@ float: left;
 min-height: 305px;
 min-width: 305px;
 background-color: pink;
+}
+.red {
+background-color: red;
 }
