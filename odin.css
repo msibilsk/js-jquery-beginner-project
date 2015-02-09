@@ -3,7 +3,7 @@ float: right;
 background-color: black;
 height: 15px; 
 width: 15px;
-margin: 2px
+margin: 2px;
 }
 .container {
 position: relative;
@@ -11,5 +11,4 @@ float: left;
 min-height: 305px;
 min-width: 305px;
 background-color: pink;
-z-index: -1;
 }
