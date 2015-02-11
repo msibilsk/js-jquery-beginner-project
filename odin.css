@@ -1,17 +1,17 @@
-.black {
+.grey {
 float: right;
-background-color: black;
-height: 15px; 
-width: 15px;
-margin: 2px;
+background-color: grey;
+height: 5px; 
+width: 5px;
+margin: 0px;
 }
 .container {
 position: relative;
 float: left;
-min-height: 305px;
-min-width: 305px;
+height: 305px;
+width: 305px;
 background-color: pink;
 }
-.red {
-background-color: red;
+.black {
+background-color: black;
 }
