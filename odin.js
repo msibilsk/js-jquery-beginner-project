@@ -1,19 +1,16 @@
 $(document).ready(function() {
-var h = 50;
-var w = 50;
-var newDim = 93025/(h*w);
-console.log(newDim);
-    
-$(".grey").css("height", newDim);
-$(".grey").css("width", newDim);
+var w = prompt("How many blocks per side?")
+var newDim = $(".container").width()/(w);
 
-console.log($(".grey").height());
-console.log($(".grey").width());
-
-for (i=0; i<h*w; i++) {
+for (i=0; i<Math.pow(w, 2); i++) {
 $('.container').append('<div class="grey"></div>');
 }
+  
+$(".grey").css("height", newDim);
+$(".grey").css("width", newDim);
 
 $(".grey").mouseenter(function(){
 $(this).addClass("black")});
 });
+
+/* divs do not fit perfectly in container with all inputs*/
