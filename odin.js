@@ -1,5 +1,6 @@
 $(document).ready(function() {
 var w = prompt("How many blocks per side?")
+/* divs do not fit perfectly in container with all inputs*/
 var newDim = $(".container").width()/(w);
 
 for (i=0; i<Math.pow(w, 2); i++) {
@@ -13,4 +14,7 @@ $(".grey").mouseenter(function(){
 $(this).addClass("black")});
 });
 
-/* divs do not fit perfectly in container with all inputs*/
+$("button").click(function() {
+	$(".black").removeClass("black");
+});
+
