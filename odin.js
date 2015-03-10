@@ -1,63 +1,59 @@
 $(document).ready(function() {
-var w = prompt("How many blocks per side?");
-var newDim = $(".container").width()/(w);
-for (i=0; i<Math.pow(w, 2); i++) {
-$('.container').append('<div class="grey"></div>');}   
-$(".grey").css("height", newDim);
-$(".grey").css("width", newDim);
+
+var reset = function() {
+	var w = prompt("How many blocks per side?");
+	var newDim = $(".container").width()/(w);
+	$(".black").remove();
+	$(".grey").remove();
+	for (i=0; i<Math.pow(w, 2); i++) {
+		$('.container').append('<div class="grey"></div>');
+	}
+	$(".grey").css("height", newDim);
+	$(".grey").css("width", newDim); 
+}
+
+reset();
+
 $(".grey").mouseenter(function() {
-$(this).addClass("black");
+	$(this).addClass("black");
 });
     
 $("#black").click(function() {
-$(".black").remove();
-$(".grey").remove();
-w = prompt("How many blocks per side?");
-newDim = $(".container").width()/(w);
-for (i=0; i<Math.pow(w, 2); i++) {
-$('.container').append('<div class="grey"></div>');}
-$(".grey").css("height", newDim);
-$(".grey").css("width", newDim);
-$(".grey").mouseenter(function(){
-$(this).addClass("black");});
+
+	reset();
+
+	$(".grey").mouseenter(function(){
+		$(this).addClass("black");
+	});
 });
     
 $("#random").click(function() {
-$(".black").remove();
-$(".grey").remove();
-w = prompt("How many blocks per side?");
-newDim = $(".container").width()/(w);
-for (i=0; i<Math.pow(w, 2); i++) {
-$('.container').append('<div class="grey"></div>');}
-$(".grey").css("height", newDim);
-$(".grey").css("width", newDim);
-function getRandomColor() {
-return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)}    
-$(".grey").mouseenter(function(){
-$(this).css("background-color", getRandomColor());});
+	
+	reset();
+	
+	function getRandomColor() {
+		return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)
+	}
+	$(".grey").mouseenter(function(){
+		$(this).css("background-color", getRandomColor());
+	});
 });
     
 $("#fiftyshades").click(function() {
-$(".black").remove();
-$(".grey").remove();
+
+    reset();
     
-w = prompt("How many blocks per side?");
-    
-newDim = $(".container").width()/(w);
-    
-for (i=0; i<Math.pow(w, 2); i++) {
-$('.container').append('<div class="grey"></div>');}
-    
-$(".grey").css("height", newDim);
-$(".grey").css("width", newDim);
-    
-$(".grey").mouseenter(function(){
-$(this).addClass("fiftyshades");});
-    
-$(".fiftyshades").mouseenter(function(){
-$(this).css("opacity", "+=0.1")
+    $(".grey").mouseenter(function(){
+        $(this).addClass("fiftyshades");
+            $(".this").mouseenter(function(){
+				if ($(this).hasClass("fiftyshades")) {
+					var shade =  $(this).css("opacity");
+					if (shade < 1) {
+						$(this).css("opacity", shade + 0.1);
+					}
+				}
+			});
+    });
 });
-});    
     
-    
-});
+});  
