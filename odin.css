@@ -1,45 +1,49 @@
 .grey {
-float: right;
-background-color: grey;
-height: 5px;
-width: 5px;
-margin: 0px;
-padding: 0px;
+	float: right;
+	background-color: grey;
+	height: 5px;
+	width: 5px;
+	margin: 0px;
+	padding: 0px;
 }
 .container {
-clear: both;
-position: relative;
-height: 500px;
-width: 500px;
-margin: 0px auto;
-border: 35px solid red;
-border-bottom: 80px solid red;
-border-radius: 25px;
+	clear: both;
+	position: relative;
+	height: 500px;
+	width: 500px;
+	margin: 0px auto;
+	border: 35px solid red;
+	border-bottom: 80px solid red;
+	border-radius: 25px;
 }
 .black {
-background-color: black;
+	background-color: black;
 }
 button {
-display: inline;
-float: left;
-background-color: #0066FF;
-border: none;
-color: white;
-font-weight: bold;
-display: block;
-margin: 10px 5px;
-padding: 5px 10px;
+	display: inline;
+	float: left;
+	background-color: #0066FF;
+	border: none;
+	color: white;
+	font-weight: bold;
+	display: block;
+	margin: 10px 5px;
+	padding: 5px 10px;
+}
+#buttons {
+	margin: 0px auto;
+	width: 32%;
 }
 .knob {
-position: absolute;
-background-color: white;
-height: 85px;
-width: 85px;
-border-radius: 100px;
-margin-top: 490px;
+	position: absolute;
+	background-color: white;
+	height: 85px;
+	width: 85px;
+	border-radius: 100px;
+	margin-top: 490px;
 }
 #knob2 {
-margin-left: 415px;
+	margin-left: 415px;
 }
 .fiftyshades {
     background-color: black;
