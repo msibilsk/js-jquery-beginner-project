@@ -45,14 +45,14 @@ $("#fiftyshades").click(function() {
     
     $(".grey").mouseenter(function(){
         $(this).addClass("fiftyshades");
-            $(".this").mouseenter(function(){
-				if ($(this).hasClass("fiftyshades")) {
-					var shade =  $(this).css("opacity");
-					if (shade < 1) {
-						$(this).css("opacity", shade + 0.1);
-					}
+        $(this).mouseenter(function(){
+			if ($(this).hasClass("fiftyshades")) {
+				var shade =  $(this).css("opacity");
+				if (shade < 1) {
+					$(this).css("opacity", shade + 0.1);
 				}
-			});
+			}
+		});
     });
 });
     
