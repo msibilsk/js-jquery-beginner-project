@@ -43,16 +43,11 @@ $("#fiftyshades").click(function() {
 
     reset();
     
-    $(".grey").mouseenter(function(){
-        $(this).addClass("fiftyshades");
-        $(this).mouseenter(function(){
-			if ($(this).hasClass("fiftyshades")) {
-				var shade =  $(this).css("opacity");
-				if (shade < 1) {
-					$(this).css("opacity", shade + 0.1);
-				}
-			}
-		});
+     $(".grey").mouseenter(function(){
+		$(this).addClass("fiftyshades");
+		if ($(this).hasClass("fiftyshades")) {
+			$(this).css("opacity", "+=0.1");
+		}
     });
 });
     
