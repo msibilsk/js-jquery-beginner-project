@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
 var reset = function() {
-	var w = prompt("How many blocks per side?");
+	var w = prompt("How many blocks per side? Choose a number between 10 and 75.");
+	while (w > 75 || w < 10 || isNaN(w)) {w = prompt("That input was invalid. Please choose a number between 10 and 75.");}
 	var newDim = $(".container").width()/(w);
 	$(".black").remove();
 	$(".grey").remove();
@@ -9,7 +10,7 @@ var reset = function() {
 		$('.container').append('<div class="grey"></div>');
 	}
 	$(".grey").css("height", newDim);
-	$(".grey").css("width", newDim); 
+	$(".grey").css("width", newDim);
 }
 
 reset();
@@ -47,8 +48,9 @@ $("#fiftyshades").click(function() {
 		$(this).addClass("fiftyshades");
 		if ($(this).hasClass("fiftyshades")) {
 			$(this).css("opacity", "+=0.1");
+			console.log($(this).css("opacity"));
 		}
     });
 });
     
-});  
+}); 
