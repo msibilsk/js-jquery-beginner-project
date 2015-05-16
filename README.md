@@ -1,2 +1,2 @@
 # js-jquery-beginner-project
-An exercise for The Odin Projects intro to web dev course
+An exercise for The Odin Project's intro to web dev course
